@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Civic AI — Road Intelligence Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ======================================================
+         SIDEBAR
+         ====================================================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+            </div>
+            <div>
+                <h2>Smart<span class="logo-ai">Civic</span></h2>
+                <span>AI Road Intelligence</span>
+            </div>
+        </div>
+
+        <nav>
+            <a class="active" href="#">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                Dashboard
+            </a>
+            <a href="#" onclick="openReport(); return false;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Report Problem
+            </a>
+            <a href="#complaints">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                My Complaints
+            </a>
+            <a href="#">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Civic Map
+            </a>
+        </nav>
+
+        <!-- Sidebar AI Badge -->
+        <div class="sidebar-badge">
+            <div class="badge-dot"></div>
+            <span>AI Model Active</span>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="#">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+                Settings
+            </a>
+            <a href="#">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                Logout
+            </a>
+        </div>
+    </aside>
+
+
+    <!-- ======================================================
+         MAIN CONTENT
+         ====================================================== -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>AI-powered civic road monitoring system</p>
+            </div>
+            <div class="profile">
+                <button class="notif-btn" aria-label="Notifications">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                    <span class="notif-dot"></span>
+                </button>
+                <div class="avatar">C</div>
+                <div>
+                    <strong>Citizen</strong>
+                    <small>Citizen Account</small>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- ====================================================
+             HERO WELCOME CARD
+             ==================================================== -->
+        <section class="hero-card">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="hero-tag-dot"></span>
+                    AI-POWERED SMART CITY SOLUTION
+                </div>
+                <h2>
+                    Detect. Report.
+                    <span class="gradient-text">Resolve.</span>
+                </h2>
+                <p>
+                    Upload a road photo and our YOLO computer vision model instantly classifies
+                    damage type, severity, and geo-location — turning citizen reports into
+                    actionable civic work orders in under 120ms.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="openReport()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        Report a Problem
+                    </button>
+                    <a class="btn-ghost" href="#complaints">
+                        View Recent
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-phone">
+                    <div class="phone-screen">
+                        <div class="phone-scan-line"></div>
+                        <div class="phone-detection-box"></div>
+                        <div class="phone-label">Pothole — 94.2%</div>
+                        <div class="phone-label-2">HIGH SEVERITY</div>
+                    </div>
+                </div>
+                <div class="hero-orb hero-orb-1"></div>
+                <div class="hero-orb hero-orb-2"></div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================
+             STATISTICS
+             ==================================================== -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div>
+                    <span>Total Reports</span>
+                    <strong>0</strong>
+                </div>
+                <div class="stat-trend stat-trend-up">↑ 0%</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                    <span>Under Review</span>
+                    <strong>0</strong>
+                </div>
+                <div class="stat-trend stat-trend-neutral">— 0%</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                    <span>Resolved</span>
+                    <strong>0</strong>
+                </div>
+                <div class="stat-trend stat-trend-up">↑ 0%</div>
+            </div>
+
+        </section>
+
+
+        <!-- ====================================================
+             AI CAPABILITY CARDS
+             ==================================================== -->
+        <section class="capability-row">
+            <div class="capability-card">
+                <div class="cap-icon cap-icon-crack">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div>
+                    <strong>Crack Detection</strong>
+                    <span>Longitudinal &amp; alligator cracks</span>
+                </div>
+            </div>
+            <div class="capability-card">
+                <div class="cap-icon cap-icon-pothole">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+                </div>
+                <div>
+                    <strong>Pothole Analysis</strong>
+                    <span>Depth &amp; severity scoring</span>
+                </div>
+            </div>
+            <div class="capability-card">
+                <div class="cap-icon cap-icon-erosion">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                </div>
+                <div>
+                    <strong>Surface Erosion</strong>
+                    <span>Abrasion &amp; wear patterns</span>
+                </div>
+            </div>
+            <div class="capability-card cap-card-highlight">
+                <div class="cap-icon cap-icon-speed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <div>
+                    <strong>&lt; 120ms</strong>
+                    <span>Inference latency</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================
+             RECENT COMPLAINTS TABLE
+             ==================================================== -->
+        <section class="complaints-section" id="complaints">
+
+            <div class="section-header">
+                <div>
+                    <h2>Recent Complaints</h2>
+                    <p>Track your submitted civic issues in real-time</p>
+                </div>
+                <button class="view-btn">View All →</button>
+            </div>
+
+            <div class="complaint-table">
+                <div class="table-header">
+                    <span>ID</span>
+                    <span>Issue</span>
+                    <span>Severity</span>
+                    <span>Location</span>
+                    <span>Status</span>
+                </div>
+                <!-- JS populates this -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ======================================================
+         REPORT MODAL
+         ====================================================== -->
+    <div class="modal-overlay" id="reportModal">
+        <div class="modal">
+
+            <button class="close-btn" onclick="closeReport()" type="button">×</button>
+
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+                <div>
+                    <p class="small-label">NEW COMPLAINT</p>
+                    <h2>Report a Road Problem</h2>
+                </div>
+            </div>
+
+            <p class="modal-description">
+                Upload a road photo — our AI will instantly identify the damage type, confidence score, and severity level.
+            </p>
+
+            <!-- IMAGE UPLOAD -->
+            <div class="upload-box" id="uploadBox">
+                <div class="upload-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                </div>
+                <h3>Upload Road Image</h3>
+                <p>JPG, PNG or WEBP · Max 10MB</p>
+                <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp" onchange="previewImage(event)">
+                <label for="imageInput" class="browse-btn">Choose Image</label>
+                <img id="preview" class="preview-image" alt="Selected road image">
+            </div>
+
+            <!-- LOCATION -->
+            <div class="location-box">
+                <div class="location-icon">📍</div>
+                <div>
+                    <strong>Complaint Location</strong>
+                    <p id="locationText">Location will be detected automatically</p>
+                </div>
+                <button onclick="getLocation()" class="location-btn" type="button">Detect</button>
+            </div>
+
+            <!-- SUBMIT -->
+            <button class="submit-btn" onclick="submitDemo()" type="button">
+                Submit Complaint
+            </button>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

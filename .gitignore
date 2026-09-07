@@ -1,0 +1,63 @@
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+env/
+
+# ── Database ──────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Large ML / dataset files ──────────────────────────────────
+# YOLO weights (large binary files)
+*.pt
+*.onnx
+*.torchscript
+
+# Raw datasets (too large for git)
+ai/dataset/kaggle_raw/
+ai/dataset/merged_pool/
+ai/dataset/final_dataset/
+ai/dataset/Data Y12 Final/train/
+ai/dataset/Data Y12 Final/valid/
+ai/dataset/Data Y12 Final/test/
+datasets/
+
+# Training run outputs
+runs/
+
+# img/ dataset (18k+ images — too large)
+img/
+
+# ── Uploads (user-submitted images) ───────────────────────────
+backend/uploads/*.jpg
+backend/uploads/*.jpeg
+backend/uploads/*.png
+backend/uploads/*.webp
+
+# ── OS / Editor ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Kaggle credentials ────────────────────────────────────────
+kaggle.json
+access_token
+
+# ── Kiro ──────────────────────────────────────────────────────
+.kiro/
+
+# Keep uploads folder structure but not files
+!backend/uploads/.gitkeep
