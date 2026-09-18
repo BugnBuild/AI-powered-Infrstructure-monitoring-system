@@ -270,13 +270,11 @@ See [DATA_FLOW_STRUCTURE.md](DATA_FLOW_STRUCTURE.md) for the complete step-by-st
 
 ---
 
-## 👥 Team
+## 👤 Developer
 
 | Name | Roll No | Role |
 |---|---|---|
 | **Raghwendra Singh** | 23BET10006 | Full Stack + AI/ML |
-| **Krish Sachan** | 23BET10033 | Backend + Database |
-| **Abhishek Singh** | 23BET10048 | Frontend + Dataset |
 
 **Institution:** VIT Bhopal University, Department of CSE  
 **Project Supervisor:** Dr. P R Bhuvaneswari
