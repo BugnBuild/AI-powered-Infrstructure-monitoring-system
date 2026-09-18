@@ -2,7 +2,11 @@
 // SMART CIVIC AI — script.js
 // ============================================
 
-const API_URL = "http://127.0.0.1:8000";
+// API_URL auto-switches: local dev uses localhost, production uses deployed backend
+const API_URL =
+    (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
+        ? "http://127.0.0.1:8000"
+        : "https://smart-civic-ai-backend.railway.app";
 
 let currentLatitude  = 23.2599;
 let currentLongitude = 77.4126;
