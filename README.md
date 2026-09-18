@@ -276,7 +276,7 @@ See [DATA_FLOW_STRUCTURE.md](DATA_FLOW_STRUCTURE.md) for the complete step-by-st
 |---|---|---|
 | **Raghwendra Singh** | 23BET10006 | Full Stack + AI/ML |
 
-**Institution:** VIT Bhopal University, Department of CSE  
+**Institution:** Vellore Institute of Technology, Bhopal — Department of CSE  
 **Project Supervisor:** Dr. P R Bhuvaneswari
 
 ---
